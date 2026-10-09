@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sebastian Ren</title>
-<meta name="description" content="Sebastian Ren — MEng Robotics & AI at UCL. Research in legged locomotion, reinforcement learning and robot perception.">
+<meta name="description" content="Sebastian Ren — MEng Robotics & AI at UCL. Research in humanoid and legged locomotion, reinforcement learning and surgical scene understanding.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
 <style>
@@ -64,9 +64,8 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 
 <nav>
   <a href="#education">Education</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
   <a href="#publications">Publications</a>
+  <a href="#experience">Experience</a>
   <a href="#awards">Awards</a>
 </nav>
 
@@ -74,86 +73,68 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
   <h2>Education</h2>
   <div class="item">
     <div class="row"><h3>University College London</h3><span class="date">Sep 2023 – Jun 2027</span></div>
-    <p class="sub">MEng Robotics and Artificial Intelligence, Department of Computer Science</p>
-    <ul>
-      <li>GPA: 3.8 / 4.0 · 4th Year Undergraduate</li>
-      <li>Relevant coursework: Reinforcement Learning, Machine Learning, Robot Dynamics, Modeling &amp; Simulation, Advanced Control Systems, Optimization Filtering &amp; Fusion, Systems Engineering for Real-time Systems</li>
-    </ul>
-  </div>
-</section>
-
-<section id="experience">
-  <h2>Research &amp; Internship Experience</h2>
-
-  <div class="item">
-    <div class="row"><h3>Research Project — UCL Robot Perception &amp; Learning Lab</h3><span class="date">Nov 2025 – Jan 2026</span></div>
-    <p class="sub">Bipedal Locomotion for Quadrupedal Robots with Automatic Fall Recovery · London, UK</p>
-    <div class="chips"><span>PyTorch</span><span>PPO</span><span>Isaac Gym</span><span>Deep RL</span><span>State Estimation</span></div>
-    <ul>
-      <li>Reproduced “Learning stable bipedal locomotion skills for quadrupedal robots” (npj Robotics 2025), implementing the TumblerNet framework for robust bipedal walking on challenging terrains.</li>
-      <li>Reproduced a Heterogeneous Actor-Critic framework with an RMA-style estimator, leveraging privileged information for training and inferring real-time states from proprioceptive history.</li>
-      <li>Reconstructed complex reward functions based on Variable Height Inverted Pendulum (VHIP) and Cart-Table dynamics to enforce stability during bipedal gaits.</li>
-      <li>Bridged the sim-to-real gap with an Actuator Net modelling non-linear motor dynamics and latency, enabling zero-shot policy deployment on physical hardware.</li>
-    </ul>
-  </div>
-
-  <div class="item">
-    <div class="row"><h3>Research Intern — ANTOBOT</h3><span class="date">Mar – May 2025</span></div>
-    <p class="sub">Human-Following Mobile Robot System · London, UK</p>
-    <div class="chips"><span>YOLOv8n</span><span>OSNet Re-ID</span><span>EKF</span><span>Artificial Potential Field</span><span>ROS</span><span>ZED2i RGB-D</span></div>
-    <ul>
-      <li>Developed a modular ROS-based system enabling an agricultural robot to detect and follow a specific target in dynamic environments.</li>
-      <li>Integrated YOLOv8n detection with an OSNet-based Re-ID module to distinguish the target from other pedestrians, robust to appearance changes.</li>
-      <li>Implemented an Extended Kalman Filter fusing vision and odometry for continuous tracking through occlusions.</li>
-      <li>Designed an Artificial Potential Field controller for real-time local planning and obstacle avoidance while keeping a safe following distance.</li>
-      <li>Validated in Gazebo simulation and deployed successfully on a physical Antobot platform.</li>
-    </ul>
-  </div>
-
-  <div class="item">
-    <div class="row"><h3>Research Intern — The Future Laboratory, Tsinghua University</h3><span class="date">Jun – Sep 2024</span></div>
-    <p class="sub">Olfaction &amp; Bio-Robotics · Beijing, China</p>
-    <div class="chips"><span>Python</span><span>MATLAB</span><span>Ansys Fluent</span><span>ROS1/2</span><span>Raspberry Pi</span><span>CAD</span><span>3D Printing</span></div>
-    <ul>
-      <li>Researched olfaction and bio-robotics, focusing on insect-inspired airflow sensing mechanisms.</li>
-      <li>Built CFD simulations in Ansys Fluent modelling airflow around insect antennae during flight.</li>
-      <li>Designed and implemented data-collection programs for electronic-antennae (E-nose) sensor systems.</li>
-      <li>Led experimental setup design and optimised research methodology.</li>
-    </ul>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Key Projects</h2>
-
-  <div class="item">
-    <div class="row"><h3>Machine Translation of Old Assyrian Cuneiform</h3><span class="date">Jan 2026</span></div>
-    <p>Multi-stage neural machine translation pipeline for 4,000-year-old Akkadian cuneiform transliterations into English. Fine-tuned ByT5-large (character-level seq2seq) on 1,500 parallel pairs, using byte-level tokenisation to handle rare diacritics without lossy normalisation. Designed linguistically-informed chunking at Akkadian clause boundaries for long texts, tuned beam search with Optuna, and implemented vectorised post-processing. <strong>Kaggle Silver Medal (18th).</strong></p>
-  </div>
-
-  <div class="item">
-    <div class="row"><h3>Vision-Based Non-Contact Anemometer on Embedded Hardware</h3><span class="date">Nov 2025</span></div>
-    <p>Estimates wind speed by optically tracking the deflection of a gravity-restored drag flap. Real-time OpenCV pipeline on Raspberry Pi 5 (HSV segmentation, centroid extraction at 10 Hz), 3rd-degree polynomial calibration and a 1D Kalman filter. Wind-tunnel validated over 0–10 m/s: RMSE 0.461 m/s, R² 0.975.</p>
-  </div>
-
-  <div class="item">
-    <div class="row"><h3>Multi-Modal AI for Mushroom Species &amp; Toxicity Identification</h3><span class="date">Nov 2025</span></div>
-    <p>YOLOv8n detection plus Vision Transformer fine-grained classification across 16 species, with regularisation against ViT overfitting. Fine-tuned Qwen2.5-7B via 4-bit QLoRA on synthetic data distilled from a Qwen2.5-VL-32B teacher, and grounded responses with a ChromaDB-based RAG system.</p>
-  </div>
-
-  <div class="item">
-    <div class="row"><h3>Tree-Climbing Robot with Obstacle Avoidance</h3><span class="date">Jun 2024</span></div>
-    <p>Co-designed and built a tree-climbing robot from concept to working prototype. Arduino Uno control with ultrasonic branch detection, custom grippers and a lead-screw linear lift; branch-avoidance logic and current sensing for motor protection. Climbs, avoids obstacles, deploys sensors and operates safely under varying loads.</p>
+    <p class="sub">MEng Robotics and Artificial Intelligence, Department of Computer Science · London, UK</p>
+    <ul><li>Average: 74.1% (First Class)</li></ul>
   </div>
 </section>
 
 <section id="publications">
   <h2>Publications</h2>
   <ul class="pub">
-    <li>Toh, B.-Z.<sup>†</sup>, <strong>Ren, Y.</strong><sup>†</sup>, Yu, T. A., Ong, N. K., Mao, Z., &amp; Bano, S. “CasCVS-Net: A Staged Multi-Task Cascade for Critical View of Safety Assessment.” <span class="venue">MICCAI SafeSurg Workshop</span> <span class="badge">Oral</span> <br><small style="color:var(--muted)">† Equal contribution</small></li>
+    <li><strong>Ren, Y.</strong><sup>†</sup>, Toh, B.-Z.<sup>†</sup>, Yu, T. A., Ong, N. K., Mao, Z., &amp; Bano, S. “CasCVS-Net: A Staged Multi-Task Cascade for Critical View of Safety Assessment.” <span class="venue">MICCAI SafeSurg 2026</span> <span class="badge">Oral</span> <a href="https://arxiv.org/abs/2609.27681">[Paper]</a><br><small style="color:var(--muted)">† Equal contribution</small></li>
     <li>Pan, Y., <strong>Ren, Y.</strong>, Chan, C., Sun, J., &amp; Zhou, C. “Calf-Integrated Arms for Bimanual Quadruped Loco-Manipulation.” <span class="venue">CLAWAR 2026</span> <span class="badge">Oral</span></li>
     <li>Xu, Y., Zhu, F., Li, Y., <strong>Ren, S.</strong>, Huang, X., &amp; Chen, Y. “RGBSQGrasp: Inferring Local Superquadric Primitives from Single RGB Image for Graspability-Aware Bin Picking.” <span class="venue">IROS 2025 RGMCW</span> <span class="badge">Best Workshop Paper</span></li>
   </ul>
+</section>
+
+<section id="experience">
+  <h2>Research &amp; Industry Experience</h2>
+
+  <div class="item">
+    <div class="row"><h3>Robotics Engineer — BYTE ABEE</h3><span class="date">Jun – Sep 2026</span></div>
+    <p class="sub">Humanoid Locomotion &amp; Motion Control · Athens, Greece</p>
+    <ul>
+      <li>Fine-tuned SONIC to transfer humanoid motion-control capabilities from Unitree G1 to AgiBot X2.</li>
+      <li>Deployed the adapted controller on the physical X2 robot for motion execution.</li>
+      <li>Built a camera-based motion-imitation system enabling X2 to observe and reproduce a human demonstrator’s movements.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="row"><h3>Research Project — UCL Hawkes Institute</h3><span class="date">Apr – Jun 2026</span></div>
+    <p class="sub">CasCVS-Net: Surgical Scene Understanding &amp; Safety Assessment · London, UK</p>
+    <ul>
+      <li>Co-authored CasCVS-Net (equal contribution), coupling detection, segmentation, and surgical Critical View of Safety (CVS) assessment through predicted anatomy and staged multi-task training.</li>
+      <li>Achieved 67.2 CVS mAP on Endoscapes (+4.0 points over LG-CVS); improved rare-anatomy segmentation from 4.6 to 15.3 mIoU over a matched single-task baseline.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="row"><h3>Research Project — UCL Robot Perception &amp; Learning Lab</h3><span class="date">Nov 2025 – Jan 2026</span></div>
+    <p class="sub">Bipedal Locomotion for Quadrupedal Robots · London, UK</p>
+    <ul>
+      <li>Reproduced TumblerNet for bipedal locomotion of quadrupedal robots in Isaac Gym simulation, using PyTorch and PPO.</li>
+      <li>Implemented the paper’s heterogeneous actor–critic, RMA-style state estimator, and reward functions based on VHIP and Cart-Table dynamics.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="row"><h3>Research Intern — ANTOBOT</h3><span class="date">Mar – May 2025</span></div>
+    <p class="sub">Human-Following Mobile Robot System · London, UK</p>
+    <ul>
+      <li>Built a ROS person-following system with YOLOv8n and OSNet Re-ID; fused vision and odometry with an EKF to maintain target state estimates through occlusions.</li>
+      <li>Integrated an Artificial Potential Field controller for obstacle avoidance; validated in Gazebo and deployed on a physical Antobot robot.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="row"><h3>Research Intern — The Future Laboratory, Tsinghua University</h3><span class="date">Jun – Sep 2024</span></div>
+    <p class="sub">Olfaction &amp; Bio-Robotics · Beijing, China</p>
+    <ul>
+      <li>Simulated airflow around insect antennae in Ansys Fluent to study bio-inspired airflow sensing.</li>
+      <li>Developed E-nose sensor data collection software and led experimental setup design.</li>
+    </ul>
+  </div>
 </section>
 
 <section id="awards">
