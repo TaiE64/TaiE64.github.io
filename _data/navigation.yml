@@ -1,0 +1,8 @@
+# Order of the links in the header. "Home" (the about page) is always shown first.
+
+main:
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Experience"
+    url: /experience/
