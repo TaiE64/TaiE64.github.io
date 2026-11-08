@@ -2,7 +2,7 @@
 main:
 
   - title: "CasCVS-Net: A Staged Multi-Task Cascade for Critical View of Safety Assessment"
-    authors: "Bock-Zien Toh<sup>†</sup>, <strong>Yuanchuan Ren</strong><sup>†</sup>, Tay Aw Yu, Ng Khee Ong, Zhehua Mao, Sophia Bano"
+    authors: "Bock-Zien Toh, <strong>Yuanchuan Ren</strong>, Tay Aw Yu, Ng Khee Ong, Zhehua Mao, Sophia Bano"
     conference_short: MICCAI
     conference: "MICCAI 2026 SafeSurg Workshop"
     arxiv: https://arxiv.org/abs/2609.27681

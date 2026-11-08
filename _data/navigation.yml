@@ -1,8 +1,4 @@
-# Order of the links in the header. "Home" (the about page) is always shown first.
+# Header links for the theme's fallback pages (404, sitemap). The home page
+# is a single page and has no header navigation.
 
-main:
-  - title: "Publications"
-    url: /publications/
-
-  - title: "Experience"
-    url: /experience/
+main: []
