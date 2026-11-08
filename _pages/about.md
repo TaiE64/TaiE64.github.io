@@ -42,7 +42,7 @@ I am a final-year MEng student in Robotics and Artificial Intelligence at [Unive
 
 ## Awards
 
-- **Best Workshop Paper Award**, IROS 2025 RGMC Workshop, 2025.
 - **Kaggle Silver Medal** (18th of 2,674 teams), [Deep Past Challenge](https://www.kaggle.com/competitions/deep-past-initiative-machine-translation), 2026.
+- **Best Workshop Paper Award**, IROS 2025 RGMC Workshop, 2025.
 - **Gold Medal**, UKMT Mathematical Challenge, 2023.
 - **Gold Medal**, British Physics Olympiad, 2021.
