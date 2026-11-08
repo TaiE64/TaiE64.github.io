@@ -248,6 +248,8 @@ redirect_from:
 <h2 class="section-title">Education</h2>
 <div class="cv-row"><strong>University College London</strong><span class="cv-date">Sep 2023 – Jun 2027</span></div>
 <p class="cv-sub">MEng Robotics and Artificial Intelligence, Department of Computer Science · London, UK<br>Average: 74.1% (First Class)</p>
+<div class="cv-row"><strong>St. Lawrence College</strong><span class="cv-date">2017 – 2023</span></div>
+<p class="cv-sub">International A Levels · Athens, Greece<br>Mathematics, Further Mathematics, Physics: A*A*A*</p>
 
 <h2 class="section-title">Awards &amp; Honors</h2>
 <ul class="awards-list">
