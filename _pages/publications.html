@@ -1,275 +1,57 @@
 ---
 layout: single
-title: "PUBLICATIONS"
+title: "Publications"
 permalink: /publications/
 author_profile: false
 ---
 
-<style>
-  /* =========================================
-     1. STATIC LIGHT THEME VARIABLES (Locked)
-     ========================================= */
-  :root {
-    --port-primary: #2c3e50;    /* Dark Academic Blue */
-    --port-text: #3b3b3b;       /* Dark Gray for readability */
-    --port-muted: #64748b;      /* Muted gray for subtitles */
-    --port-bg: #fdfdfd;         /* Almost white for cards */
-    --port-border: #eaeaea;     /* Light gray borders */
-  }
-
-  /* =========================================
-     2. GLOBAL HEADER FIXES (Matches Portfolio)
-     ========================================= */
-  .masthead, 
-  .masthead__inner-wrap, 
-  .masthead__menu, 
-  .masthead__menu ul, 
-  .greedy-nav {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
-  }
-  
-  .masthead {
-    border-bottom: 1px solid var(--port-border) !important;
-  }
-
-  .masthead a, 
-  .masthead__menu-item,
-  .masthead__menu-item a,
-  .greedy-nav a, 
-  .greedy-nav .visible-links,
-  .greedy-nav .visible-links li,
-  .greedy-nav .visible-links a {
-    background-color: transparent !important;
-    background: transparent !important;
-    color: var(--port-text) !important;
-  }
-
-  .masthead a:hover,
-  .greedy-nav a:hover,
-  .greedy-nav .visible-links a:hover,
-  .greedy-nav .visible-links li.masthead__menu-item--current a,
-  .greedy-nav .visible-links li.masthead__menu-item--current a:hover {
-    background-color: transparent !important;
-    background: transparent !important;
-    color: var(--port-primary) !important;
-  }
-
-  h1.page__title, .page__title {
-    color: var(--port-primary) !important;
-    font-weight: 700 !important;
-  }
-
-  /* Collaboration Alert */
-  .collab-box {
-    background-color: var(--accent-color);
-    border-left: 4px solid var(--port-primary);
-    padding: 14px 18px;
-    font-size: 0.95em;
-    color: var(--port-primary);
-    font-weight: 500;
-    margin: 30px 0;
-    border-radius: 0 4px 4px 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-    line-height: 1.6;
-  }
-
-  /* =========================================
-     3. PUBLICATIONS LAYOUT STYLES
-     ========================================= */
-  .pub-section-title {
-    margin-top: 45px; 
-    border-bottom: 1px solid var(--port-border); 
-    padding-bottom: 8px; 
-    text-transform: uppercase; 
-    color: var(--port-primary); 
-    font-size: 1.15em !important; 
-    font-weight: 700;
-    letter-spacing: 0.1em;
-  }
-
-  .pub-list { 
-    line-height: 1.6; 
-    margin-bottom: 40px; 
-    font-size: 0.95em; 
-    color: var(--port-text); 
-    padding-left: 20px; 
-  }
-  .pub-list li { 
-    margin-bottom: 35px; 
-    padding-left: 5px; 
-  }
-  
-  .paper-title { 
-    font-weight: 700; 
-    color: var(--port-primary); 
-    display: block; 
-    margin: 0 0 6px 0; 
-    font-size: 1.05em; 
-    line-height: 1.4;
-  }
-
-  .authors-list { 
-    font-size: 0.9em; 
-    color: var(--port-muted); 
-    margin-bottom: 12px; 
-  }
-
-  /* Interactive Toolbar */
-  .paper-meta { 
-    display: flex; 
-    flex-wrap: wrap; 
-    align-items: center; 
-    gap: 10px; 
-    margin-top: 8px; 
-  }
-
-  .meta-btn, .impact-badge {
-    cursor: pointer; 
-    font-size: 0.75em; 
-    font-weight: 600; 
-    border-radius: 4px;
-    padding: 4px 10px;
-    transition: all 0.2s ease; 
-    display: inline-block;
-    letter-spacing: 0.03em;
-  }
-
-  /* Toolbar Button Styles */
-  .venue-btn { background-color: var(--port-primary); color: #ffffff; border: 1px solid var(--port-primary); }
-  .impact-badge { background-color: var(--port-bg); color: var(--port-primary); border: 1px solid var(--port-border); cursor: default; }
-  .doi-btn { background-color: #f0f7ff; color: #3172b4; border: 1px solid #d0e3f7; }
-  .abstract-btn { background-color: var(--port-bg); color: var(--port-muted); border: 1px solid var(--port-border); text-transform: uppercase; }
-  .abstract-btn:hover { background-color: var(--port-primary); color: #ffffff; border-color: var(--port-primary); }
-
-  /* Info Boxes (Abstract Dropdowns) */
-  .info-box {
-    display: none; 
-    margin-top: 15px; 
-    font-size: 0.95em; 
-    padding: 16px 20px;
-    background: var(--port-bg); 
-    border-left: 3px solid var(--port-primary); 
-    border-radius: 0 4px 4px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03); 
-    border-top: 1px solid var(--port-border);
-    border-right: 1px solid var(--port-border);
-    border-bottom: 1px solid var(--port-border);
-  }
-  
-  .info-box p { 
-    text-align: justify !important; 
-    text-justify: inter-word !important;
-    line-height: 1.7 !important;
-    margin: 0 0 12px 0; 
-    color: var(--port-text);
-  }
-  .info-box p:last-child { margin-bottom: 0; }
-  .badge-wrap { display: inline-block; vertical-align: middle; margin-top: -2px; }
-
-  @media (max-width: 768px) { 
-    .pub-list { font-size: 0.95em; padding-left: 15px; } 
-    .pub-list li { margin-bottom: 30px; }
-    .paper-title { font-size: 1em; }
-    .meta-btn, .impact-badge { padding: 4px 8px; font-size: 0.7em; }
-    .info-box { padding: 14px 16px; }
-  }
-
-  /* Direct paper link */
-  .link-btn {
-    font-size: 0.75em; font-weight: 600; border-radius: 4px; padding: 4px 10px;
-    letter-spacing: 0.03em; display: inline-block; text-decoration: none !important;
-    background-color: #f0f7ff; color: #3172b4 !important; border: 1px solid #d0e3f7;
-    transition: all 0.2s ease;
-  }
-  .link-btn:hover { background-color: #3172b4; color: #ffffff !important; border-color: #3172b4; }
-  .pub-note { font-size: 0.85em; color: var(--port-muted); margin-top: -20px; }
-</style>
-
-{% if site.author.googlescholar %}
-  <div class="collab-box" style="background-color: #f8fbfd;">
-    You can also find my articles with the latest citations on <a href="https://scholar.google.com/citations?user={{ site.author.googlescholar }}" style="color:#3172b4; text-decoration:underline; font-weight:600;">my Google Scholar profile</a>.
-  </div>
-{% endif %}
-
-{% include base_path %}
-
-<h2 class="pub-section-title">Conference &amp; Workshop Papers</h2>
-<ol class="pub-list">
-
-  <li>
-    <span class="paper-title">CasCVS-Net: A Staged Multi-Task Cascade for Critical View of Safety Assessment.</span>
-    <div class="authors-list">Toh, B.-Z.<sup>†</sup>, <strong>Ren, Y.</strong><sup>†</sup>, Yu, T. A., Ong, N. K., Mao, Z., and Bano, S., (2026).</div>
-    <div class="paper-meta">
-      <span class="meta-btn venue-btn" data-full="MICCAI 2026 SafeSurg Workshop — Oral presentation.">SafeSurg &#x27;26</span>
-      <span class="impact-badge">Oral</span>
-      <span class="meta-btn abstract-btn">Abstract</span>
-      <a class="link-btn" href="https://arxiv.org/abs/2609.27681" target="_blank" rel="noopener">arXiv</a>
+<ul class="pubs">
+  <li class="pub">
+    <div class="pub__title">CasCVS-Net: A Staged Multi-Task Cascade for Critical View of Safety Assessment</div>
+    <div class="pub__authors">Bock-Zien Toh<sup>†</sup>, <strong>Yuanchuan Ren</strong><sup>†</sup>, Tay Aw Yu, Ng Khee Ong, Zhehua Mao, Sophia Bano</div>
+    <div class="pub__venue"><em>MICCAI 2026 SafeSurg Workshop</em> · <span class="pub__award">Oral</span></div>
+    <div class="pub__links">
+      <a href="https://arxiv.org/abs/2609.27681" target="_blank" rel="noopener">arXiv</a>
+      <a href="https://arxiv.org/pdf/2609.27681" target="_blank" rel="noopener">PDF</a>
+      <button type="button" aria-expanded="false" aria-controls="abs-0">Abstract</button>
     </div>
-    <div class="info-box details-info"></div>
-    <div class="info-box abstract-info">
-      <p>Automated assessment of the Critical View of Safety (CVS) in laparoscopic cholecystectomy requires both recognition of the three CVS criteria and anatomical grounding in small, rare, and often occluded hepatocystic structures. Learning-based methods differ in the anatomical information they use, from image-level classification to detection, segmentation, or graph-based reasoning, yet grounding the safety-critical anatomy remains the main bottleneck. We propose CasCVS-Net, a staged multi-task cascade that jointly performs object detection, semantic segmentation, and CVS assessment, trained on the Endoscapes dataset. The model couples the tasks through predicted anatomy: predicted boxes guide segmentation, and predicted masks provide region-level features for CVS classification, so CVS assessment at inference uses only model predictions rather than ground-truth annotations. To reduce optimisation instability in this coupled setting, training progresses from detection to detection-segmentation and then to the full three-task cascade, followed by task-wise fine-tuning. Evaluation on the public unseen test set shows that CasCVS-Net improves over matched single-task baselines on all three tasks, achieving 32.0 detection mAP, 46.8 semantic mIoU, 15.3 rare-anatomy mIoU, and 67.2 CVS mAP. It outperforms the state-of-the-art LG-CVS and SV2LSTG by 6.3% and 4.5% relative CVS mAP, respectively, corresponding to 4.0 and 2.9 mAP points. These results show that staged task coupling through predicted boxes and masks improves anatomical grounding for CVS assessment, particularly for rare hepatocystic structures.</p>
-    </div>
+    <div class="pub__abstract" id="abs-0" hidden>Automated assessment of the Critical View of Safety (CVS) in laparoscopic cholecystectomy requires both recognition of the three CVS criteria and anatomical grounding in small, rare, and often occluded hepatocystic structures. Learning-based methods differ in the anatomical information they use, from image-level classification to detection, segmentation, or graph-based reasoning, yet grounding the safety-critical anatomy remains the main bottleneck. We propose CasCVS-Net, a staged multi-task cascade that jointly performs object detection, semantic segmentation, and CVS assessment, trained on the Endoscapes dataset. The model couples the tasks through predicted anatomy: predicted boxes guide segmentation, and predicted masks provide region-level features for CVS classification, so CVS assessment at inference uses only model predictions rather than ground-truth annotations. To reduce optimisation instability in this coupled setting, training progresses from detection to detection-segmentation and then to the full three-task cascade, followed by task-wise fine-tuning. Evaluation on the public unseen test set shows that CasCVS-Net improves over matched single-task baselines on all three tasks, achieving 32.0 detection mAP, 46.8 semantic mIoU, 15.3 rare-anatomy mIoU, and 67.2 CVS mAP. It outperforms the state-of-the-art LG-CVS and SV2LSTG by 6.3% and 4.5% relative CVS mAP, respectively, corresponding to 4.0 and 2.9 mAP points. These results show that staged task coupling through predicted boxes and masks improves anatomical grounding for CVS assessment, particularly for rare hepatocystic structures.</div>
   </li>
 
-  <li>
-    <span class="paper-title">Calf-Integrated Arms for Bimanual Quadruped Loco-Manipulation.</span>
-    <div class="authors-list">Pan, Y., <strong>Ren, Y.</strong>, Chan, C., Sun, J., and Zhou, C., (2026).</div>
-    <div class="paper-meta">
-      <span class="meta-btn venue-btn" data-full="CLAWAR 2026: International Conference on Climbing and Walking Robots — Oral presentation.">CLAWAR &#x27;26</span>
-      <span class="impact-badge">Oral</span>
-      <span class="meta-btn abstract-btn">Abstract</span>
-      <a class="link-btn" href="https://arxiv.org/abs/2607.06186" target="_blank" rel="noopener">arXiv</a>
+  <li class="pub">
+    <div class="pub__title">Calf-Integrated Arms for Bimanual Quadruped Loco-Manipulation</div>
+    <div class="pub__authors">Yan Pan, <strong>Yuanchuan Ren</strong>, Chipui Chan, Jingcheng Sun, Chengxu Zhou</div>
+    <div class="pub__venue"><em>CLAWAR 2026</em> · <span class="pub__award">Oral</span></div>
+    <div class="pub__links">
+      <a href="https://arxiv.org/abs/2607.06186" target="_blank" rel="noopener">arXiv</a>
+      <a href="https://arxiv.org/pdf/2607.06186" target="_blank" rel="noopener">PDF</a>
+      <button type="button" aria-expanded="false" aria-controls="abs-1">Abstract</button>
     </div>
-    <div class="info-box details-info"></div>
-    <div class="info-box abstract-info">
-      <p>Most quadruped loco-manipulation designs trade manipulation capability against stance. A trunk-mounted arm sits high and usually carries a single arm; using the legs as manipulators lifts the manipulating leg off the ground; and even leg-mounted grippers reach two-handed tasks only by rearing onto the hind legs. This paper integrates a manipulator with a prismatic slider, two revolute joints, and a gripper into each front calf of a Unitree Go2. The two arms grasp objects at ground level and manipulate with both hands while all four feet stay planted, without rearing. With one arm carrying, the base stays free to walk. A vision-language model sequences skills from a predefined library at each skill boundary, conditioned on the head-camera image and task state, for long-horizon autonomy. In simulation, the design performs three bimanual tasks: a long-horizon cabinet task under autonomous skill selection, a cooperative two-handed lift, and an inter-arm handover.</p>
-    </div>
+    <div class="pub__abstract" id="abs-1" hidden>Most quadruped loco-manipulation designs trade manipulation capability against stance. A trunk-mounted arm sits high and usually carries a single arm; using the legs as manipulators lifts the manipulating leg off the ground; and even leg-mounted grippers reach two-handed tasks only by rearing onto the hind legs. This paper integrates a manipulator with a prismatic slider, two revolute joints, and a gripper into each front calf of a Unitree Go2. The two arms grasp objects at ground level and manipulate with both hands while all four feet stay planted, without rearing. With one arm carrying, the base stays free to walk. A vision-language model sequences skills from a predefined library at each skill boundary, conditioned on the head-camera image and task state, for long-horizon autonomy. In simulation, the design performs three bimanual tasks: a long-horizon cabinet task under autonomous skill selection, a cooperative two-handed lift, and an inter-arm handover.</div>
   </li>
 
-  <li>
-    <span class="paper-title">RGBSQGrasp: Inferring Local Superquadric Primitives from Single RGB Image for Graspability-Aware Bin Picking.</span>
-    <div class="authors-list">Xu, Y., Zhu, F., Li, Y., <strong>Ren, S.</strong>, Huang, X., and Chen, Y., (2025).</div>
-    <div class="paper-meta">
-      <span class="meta-btn venue-btn" data-full="IROS 2025 RGMC Workshop — Best Workshop Paper Award.">IROS &#x27;25 RGMCW</span>
-      <span class="impact-badge">Best Workshop Paper</span>
-      <span class="meta-btn abstract-btn">Abstract</span>
-      <a class="link-btn" href="https://arxiv.org/abs/2503.02387" target="_blank" rel="noopener">arXiv</a>
+  <li class="pub">
+    <div class="pub__title">RGBSQGrasp: Inferring Local Superquadric Primitives from Single RGB Image for Graspability-Aware Bin Picking</div>
+    <div class="pub__authors">Yifeng Xu, Fan Zhu, Ye Li, <strong>Sebastian Ren</strong>, Xiaonan Huang, Yuhao Chen</div>
+    <div class="pub__venue"><em>IROS 2025 RGMC Workshop</em> · <span class="pub__award">Best Workshop Paper Award</span></div>
+    <div class="pub__links">
+      <a href="https://arxiv.org/abs/2503.02387" target="_blank" rel="noopener">arXiv</a>
+      <a href="https://arxiv.org/pdf/2503.02387" target="_blank" rel="noopener">PDF</a>
+      <button type="button" aria-expanded="false" aria-controls="abs-2">Abstract</button>
     </div>
-    <div class="info-box details-info"></div>
-    <div class="info-box abstract-info">
-      <p>Bin picking is a challenging robotic task due to occlusions and physical constraints that limit visual information for object recognition and grasping. Existing approaches often rely on known CAD models or prior object geometries, restricting generalization to novel or unknown objects. Other methods directly regress grasp poses from RGB-D data without object priors, but the inherent noise in depth sensing and the lack of object understanding make grasp synthesis and evaluation more difficult. Superquadrics (SQ) offer a compact, interpretable shape representation that captures the physical and graspability understanding of objects. However, recovering them from limited viewpoints is challenging, as existing methods rely on multiple perspectives for near-complete point cloud reconstruction, limiting their effectiveness in bin-picking. To address these challenges, we propose <strong>RGBSQGrasp</strong>, a grasping framework that leverages superquadric shape primitives and foundation metric depth estimation models to infer grasp poses from a monocular RGB camera – eliminating the need for depth sensors. Our framework integrates a universal, cross-platform dataset generation pipeline, a foundation model-based object point cloud estimation module, a global-local superquadric fitting network, and an SQ-guided grasp pose sampling module. By integrating these components, RGBSQGrasp reliably infers grasp poses through geometric reasoning, enhancing grasp stability and adaptability to unseen objects. Real-world robotic experiments demonstrate a 92% grasp success rate, highlighting the effectiveness of RGBSQGrasp in packed bin-picking environments.</p>
-    </div>
+    <div class="pub__abstract" id="abs-2" hidden>Bin picking is a challenging robotic task due to occlusions and physical constraints that limit visual information for object recognition and grasping. Existing approaches often rely on known CAD models or prior object geometries, restricting generalization to novel or unknown objects. Other methods directly regress grasp poses from RGB-D data without object priors, but the inherent noise in depth sensing and the lack of object understanding make grasp synthesis and evaluation more difficult. Superquadrics (SQ) offer a compact, interpretable shape representation that captures the physical and graspability understanding of objects. However, recovering them from limited viewpoints is challenging, as existing methods rely on multiple perspectives for near-complete point cloud reconstruction, limiting their effectiveness in bin-picking. To address these challenges, we propose RGBSQGrasp, a grasping framework that leverages superquadric shape primitives and foundation metric depth estimation models to infer grasp poses from a monocular RGB camera — eliminating the need for depth sensors. Our framework integrates a universal, cross-platform dataset generation pipeline, a foundation model-based object point cloud estimation module, a global-local superquadric fitting network, and an SQ-guided grasp pose sampling module. By integrating these components, RGBSQGrasp reliably infers grasp poses through geometric reasoning, enhancing grasp stability and adaptability to unseen objects. Real-world robotic experiments demonstrate a 92% grasp success rate, highlighting the effectiveness of RGBSQGrasp in packed bin-picking environments.</div>
   </li>
-</ol>
-<p class="pub-note">† Equal contribution.</p>
+</ul>
+
+<p class="note">† Equal contribution.</p>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('.meta-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
-        const parent = this.closest('li');
-        const detailsBox = parent.querySelector('.details-info');
-        const abstractBox = parent.querySelector('.abstract-info');
-        
-        if (this.classList.contains('venue-btn') || this.classList.contains('doi-btn')) {
-          abstractBox.style.display = "none";
-          const isDoi = this.classList.contains('doi-btn');
-          const content = this.getAttribute('data-full');
-          const html = isDoi ? `<strong>Link:</strong> <a href="${content}" target="_blank" style="color:#3172b4; text-decoration:underline;">${content}</a>` : `<strong>Venue:</strong> ${content}`;
-          
-          if (detailsBox.style.display === "block" && detailsBox.innerHTML === html) {
-            detailsBox.style.display = "none";
-          } else {
-            detailsBox.innerHTML = html;
-            detailsBox.style.display = "block";
-          }
-        } 
-        else if (this.classList.contains('abstract-btn')) {
-          detailsBox.style.display = "none";
-          abstractBox.style.display = (abstractBox.style.display === "block") ? "none" : "block";
-        }
-      });
+  document.querySelectorAll('.pub__links button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var box = document.getElementById(btn.getAttribute('aria-controls'));
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      box.hidden = open;
     });
   });
 </script>

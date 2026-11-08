@@ -1,425 +1,60 @@
 ---
 layout: single
-title: "EXPERIENCE"
+title: "Experience"
 permalink: /experience/
+author_profile: false
 redirect_from:
   - /portfolio/
-author_profile: false
 ---
 
-<style>
-  /* 1. Header Fixes (Completely Transparent Links) */
-  .masthead, 
-  .masthead__inner-wrap, 
-  .masthead__menu, 
-  .masthead__menu ul, 
-  .greedy-nav {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
-  }
-  
-  .masthead {
-    border-bottom: 1px solid #eaeaea !important;
-  }
-
-  /* Force the individual links to have NO background */
-  .masthead a, 
-  .masthead__menu-item,
-  .masthead__menu-item a,
-  .greedy-nav a, 
-  .greedy-nav .visible-links,\n  .greedy-nav .visible-links li,
-  .greedy-nav .visible-links a {
-    background-color: transparent !important;
-    background: transparent !important;
-    color: #3b3b3b !important;
-  }
-
-  /* KILL THE GRAY HOVER BOX - Keep text blue on hover, no background */
-  .masthead a:hover,
-  .greedy-nav a:hover,
-  .greedy-nav .visible-links a:hover,
-  .greedy-nav .visible-links li.masthead__menu-item--current a,
-  .greedy-nav .visible-links li.masthead__menu-item--current a:hover {
-    background-color: transparent !important;
-    background: transparent !important;
-    color: #2c3e50 !important;
-  }
-
-  /* 2. Portfolio Layout Variables */
-  :root {
-    --port-primary: #2c3e50;
-    --port-text: #3b3b3b;
-    --port-muted: #64748b;
-    --port-bg: #fdfdfd;
-    --port-border: #eaeaea;
-  }
-
-  h1.page__title, .page__title {
-    color: var(--port-primary) !important;
-    font-weight: 700 !important;
-  }
-
-  /* 3. Portfolio Card Styles */
-  .portfolio-section-title {
-    margin: 40px 0 25px;
-    border-bottom: 1px solid var(--port-border);
-    padding-bottom: 10px;
-    text-transform: uppercase;
-    color: var(--port-primary) !important;
-    font-size: 1.1em !important;
-    letter-spacing: 0.1em;
-    font-weight: 700;
-  }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 40px;
-  }
-
-  .skill-category h3 {
-    font-size: 0.85em;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--port-muted) !important;
-    margin-bottom: 12px;
-    border-bottom: 1px solid var(--port-border);
-    padding-bottom: 5px;
-    font-weight: 600;
-  }
-
-  .badge-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .skill-badge {
-    display: flex;
-    align-items: center;
-    background-color: var(--port-bg) !important;
-    border: 1px solid var(--port-border) !important;
-    padding: 5px 12px;
-    border-radius: 4px;
-    font-size: 0.82em;
-    color: var(--port-text) !important;
-    font-weight: 500;
-    transition: all 0.3s ease;
-  }
-
-  .skill-badge img, .skill-badge i {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-    object-fit: contain;
-    filter: grayscale(100%) opacity(70%) !important;
-    transition: all 0.3s ease;
-  }
-
-  .skill-badge:hover {
-    transform: translateY(-2px);
-    border-color: var(--port-primary) !important;
-    color: var(--port-primary) !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  .skill-badge:hover img, .skill-badge:hover i {
-    filter: grayscale(0%) opacity(100%) !important;
-    color: var(--port-primary) !important;
-  }
-
-  .project-card {
-    background: var(--port-bg) !important;
-    border: 1px solid var(--port-border) !important;
-    border-left: 4px solid var(--port-primary) !important;
-    border-radius: 6px;
-    padding: 30px;
-    margin-bottom: 30px;
-    transition: all 0.3s ease;
-  }
-
-  .project-card:hover {
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  }
-
-  .project-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 7px 15px;
-    border: 1px solid var(--port-primary) !important;
-    color: var(--port-primary) !important;
-    border-radius: 4px;
-    font-size: 0.8em;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    margin-right: 10px;
-    transition: all 0.3s ease;
-    background: transparent !important;
-  }
-
-  .project-btn:hover {
-    background: var(--port-primary) !important;
-    color: #ffffff !important;
-  }
-
-  @media (max-width: 850px) {
-    .skills-grid { grid-template-columns: 1fr; gap: 20px; }
-  }
-
-  /* Base Card - Ultra Clean */
-  .story-card { 
-    background: var(--port-bg) !important; 
-    border: 1px solid var(--port-border) !important; 
-    border-radius: 12px; 
-    padding: 40px; 
-    margin-bottom: 40px; 
-    box-shadow: 0 8px 30px rgba(0,0,0,0.03);
-    transition: box-shadow 0.3s ease;
-  }
-  .story-card:hover {
-    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
-  }
-  
-  .project-title {
-    font-size: 1.3em;
-    font-weight: 800;
-    color: var(--port-primary);
-    margin-bottom: 15px;
-    letter-spacing: -0.01em;
-  }
-
-  .story-hook { 
-    font-size: 0.95em; 
-    line-height: 1.8; 
-    color: var(--port-text); 
-    text-align: justify; 
-    margin-bottom: 25px; 
-  }
-
-  /* The "Unfold" Button */
-  .unfold-prompt {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    border: none;
-    font-size: 0.9em;
-    font-weight: 600;
-    color: #3172b4;
-    cursor: pointer;
-    padding: 0;
-    transition: all 0.3s ease;
-  }
-  .unfold-prompt:hover {
-    color: var(--port-primary);
-  }
-  .unfold-prompt i {
-    transition: transform 0.4s ease;
-  }
-  .unfold-prompt.open i {
-    transform: rotate(180deg);
-  }
-
-  /* The Hidden Journey Container */
-  .journey-container {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
-  }
-  .journey-container.expanded {
-    max-height: 2000px;
-    opacity: 1;
-    margin-top: 35px;
-    padding-top: 30px;
-    border-top: 1px dashed var(--port-border);
-  }
-  
-  /* Minimalist Pill Navigation */
-  .pill-nav-container {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 35px;
-  }
-  .pill-nav {
-    display: inline-flex;
-    background: #f4f6f8;
-    border-radius: 30px;
-    padding: 5px;
-    gap: 5px;
-    flex-wrap: wrap;
-  }
-  .pill-btn { 
-    background: transparent; 
-    border: none; 
-    padding: 8px 18px; 
-    font-size: 0.85em; 
-    font-weight: 600; 
-    color: var(--port-muted); 
-    border-radius: 25px;
-    cursor: default; 
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
-  }
-  .pill-btn:hover { color: var(--port-primary); }
-  .pill-btn.active { 
-    background: #ffffff;
-    color: var(--port-primary); 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  }
-  
-  /* Smooth Cross-Fade Content Area */
-  .content-wrapper {
-    display: grid;
-    position: relative;
-  }
-  .tab-content { 
-    grid-area: 1 / 1; 
-    opacity: 0; 
-    transform: translateY(10px); 
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
-    pointer-events: none; 
-    visibility: hidden;
-  }
-  .tab-content.active { 
-    opacity: 1; 
-    transform: translateY(0); 
-    pointer-events: auto; 
-    visibility: visible;
-    z-index: 2;
-  }
-  
-  /* Internal Tab Typography */
-  .tab-pane-title { 
-    font-size: 1.15em; font-weight: 700; color: var(--port-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
-  }
-  .tab-pane-desc { 
-    font-size: 0.95em; line-height: 1.8; color: var(--port-text); text-align: justify; margin-bottom: 25px; 
-  }
-  
-  /* Dynamic Action Area */
-  .tab-actions {
-    border-top: 1px solid var(--port-border); padding-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;
-  }
-
-  /* Experience cards */
-  .exp-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
-  .exp-title { margin: 0 !important; font-size: 1.08em !important; font-weight: 700; color: var(--port-primary) !important; }
-  .exp-date { color: var(--port-muted); font-weight: 600; font-size: 0.85em; white-space: nowrap; }
-  .exp-sub { color: var(--port-muted); font-size: 0.9em; margin: 4px 0 12px; }
-  .project-card ul { margin: 0 0 16px; padding-left: 20px; font-size: 0.92em; line-height: 1.65; color: var(--port-text); }
-  .project-card li { margin-bottom: 6px; }
-  .project-card .badge-container { gap: 8px; }
-  .project-card .skill-badge { padding: 3px 10px; font-size: 0.75em; }
-  .project-card .project-btn { margin-top: 16px; text-decoration: none !important; }
-  @media (max-width: 768px) { .project-card { padding: 20px; } }
-</style>
-
-<div class="portfolio-section-title">Technical Skills</div>
-
-<div class="skills-grid">
-  <div>
-    <div class="skill-category">
-      <h3>Machine Learning</h3>
-      <div class="badge-container">
-        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</div>
-        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"> PyTorch</div>
-        <div class="skill-badge"><i class="fas fa-brain"></i> Reinforcement Learning (PPO)</div>
-        <div class="skill-badge"><i class="fas fa-eye"></i> YOLOv8</div>
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <div class="skill-category">
-      <h3>Robotics &amp; Simulation</h3>
-      <div class="badge-container">
-        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ros/ros-original.svg" alt="ROS"> ROS</div>
-        <div class="skill-badge"><i class="fas fa-cubes"></i> Isaac Gym</div>
-        <div class="skill-badge"><i class="fas fa-robot"></i> Gazebo</div>
-        <div class="skill-badge"><i class="fas fa-wind"></i> Ansys Fluent</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="portfolio-section-title">Research &amp; Industry Experience</div>
-
-<div class="project-card" markdown="0">
-  <div class="exp-head"><h3 class="exp-title">Robotics Engineer — BYTE ABEE</h3><span class="exp-date">Jun – Sep 2026</span></div>
-  <div class="exp-sub">Humanoid Locomotion &amp; Motion Control · Athens, Greece</div>
+<div class="entry">
+  <div class="entry__head"><span class="entry__title">Robotics Engineer, BYTE ABEE</span><span class="entry__date">Jun – Sep 2026</span></div>
+  <p class="entry__sub">Humanoid locomotion &amp; motion control · Athens, Greece</p>
   <ul>
     <li>Fine-tuned SONIC to transfer humanoid motion-control capabilities from Unitree G1 to AgiBot X2.</li>
     <li>Deployed the adapted controller on the physical X2 robot for motion execution.</li>
     <li>Built a camera-based motion-imitation system enabling X2 to observe and reproduce a human demonstrator’s movements.</li>
   </ul>
-  <div class="badge-container">
-    <div class="skill-badge">SONIC</div>
-    <div class="skill-badge">Unitree G1</div>
-    <div class="skill-badge">AgiBot X2</div>
-    <div class="skill-badge">Motion Imitation</div>
-  </div>
 </div>
 
-<div class="project-card" markdown="0">
-  <div class="exp-head"><h3 class="exp-title">Research Project — UCL Hawkes Institute</h3><span class="exp-date">Apr – Jun 2026</span></div>
-  <div class="exp-sub">CasCVS-Net: Surgical Scene Understanding &amp; Safety Assessment · London, UK</div>
+<div class="entry">
+  <div class="entry__head"><span class="entry__title">Research Project, UCL Hawkes Institute</span><span class="entry__date">Apr – Jun 2026</span></div>
+  <p class="entry__sub">CasCVS-Net: surgical scene understanding &amp; safety assessment · London, UK</p>
   <ul>
-    <li>Co-authored CasCVS-Net (equal contribution), coupling detection, segmentation, and surgical Critical View of Safety (CVS) assessment through predicted anatomy and staged multi-task training.</li>
+    <li>Co-authored <a href="https://arxiv.org/abs/2609.27681">CasCVS-Net</a> (equal contribution), coupling detection, segmentation, and surgical Critical View of Safety (CVS) assessment through predicted anatomy and staged multi-task training.</li>
     <li>Achieved 67.2 CVS mAP on Endoscapes (+4.0 points over LG-CVS); improved rare-anatomy segmentation from 4.6 to 15.3 mIoU over a matched single-task baseline.</li>
   </ul>
-  <div class="badge-container">
-    <div class="skill-badge">Multi-Task Learning</div>
-    <div class="skill-badge">Detection</div>
-    <div class="skill-badge">Segmentation</div>
-    <div class="skill-badge">Endoscapes</div>
-  </div>
-  <a href="https://arxiv.org/abs/2609.27681" class="project-btn" target="_blank" rel="noopener"><i class="fas fa-file-alt" style="margin-right:6px;"></i> Paper</a>
 </div>
 
-<div class="project-card" markdown="0">
-  <div class="exp-head"><h3 class="exp-title">Research Project — UCL Robot Perception &amp; Learning Lab</h3><span class="exp-date">Nov 2025 – Jan 2026</span></div>
-  <div class="exp-sub">Bipedal Locomotion for Quadrupedal Robots · London, UK</div>
+<div class="entry">
+  <div class="entry__head"><span class="entry__title">Research Project, UCL Robot Perception &amp; Learning Lab</span><span class="entry__date">Nov 2025 – Jan 2026</span></div>
+  <p class="entry__sub">Bipedal locomotion for quadrupedal robots · London, UK</p>
   <ul>
     <li>Reproduced TumblerNet for bipedal locomotion of quadrupedal robots in Isaac Gym simulation, using PyTorch and PPO.</li>
     <li>Implemented the paper’s heterogeneous actor–critic, RMA-style state estimator, and reward functions based on VHIP and Cart-Table dynamics.</li>
   </ul>
-  <div class="badge-container">
-    <div class="skill-badge">Isaac Gym</div>
-    <div class="skill-badge">PyTorch</div>
-    <div class="skill-badge">PPO</div>
-    <div class="skill-badge">Actor–Critic</div>
-  </div>
 </div>
 
-<div class="project-card" markdown="0">
-  <div class="exp-head"><h3 class="exp-title">Research Intern — ANTOBOT</h3><span class="exp-date">Mar – May 2025</span></div>
-  <div class="exp-sub">Human-Following Mobile Robot System · London, UK</div>
+<div class="entry">
+  <div class="entry__head"><span class="entry__title">Research Intern, ANTOBOT</span><span class="entry__date">Mar – May 2025</span></div>
+  <p class="entry__sub">Human-following mobile robot system · London, UK</p>
   <ul>
     <li>Built a ROS person-following system with YOLOv8n and OSNet Re-ID; fused vision and odometry with an EKF to maintain target state estimates through occlusions.</li>
     <li>Integrated an Artificial Potential Field controller for obstacle avoidance; validated in Gazebo and deployed on a physical Antobot robot.</li>
   </ul>
-  <div class="badge-container">
-    <div class="skill-badge">ROS</div>
-    <div class="skill-badge">YOLOv8n</div>
-    <div class="skill-badge">OSNet Re-ID</div>
-    <div class="skill-badge">EKF</div>
-    <div class="skill-badge">Gazebo</div>
-  </div>
 </div>
 
-<div class="project-card" markdown="0">
-  <div class="exp-head"><h3 class="exp-title">Research Intern — The Future Laboratory, Tsinghua University</h3><span class="exp-date">Jun – Sep 2024</span></div>
-  <div class="exp-sub">Olfaction &amp; Bio-Robotics · Beijing, China</div>
+<div class="entry">
+  <div class="entry__head"><span class="entry__title">Research Intern, The Future Laboratory, Tsinghua University</span><span class="entry__date">Jun – Sep 2024</span></div>
+  <p class="entry__sub">Olfaction &amp; bio-robotics · Beijing, China</p>
   <ul>
     <li>Simulated airflow around insect antennae in Ansys Fluent to study bio-inspired airflow sensing.</li>
     <li>Developed E-nose sensor data collection software and led experimental setup design.</li>
   </ul>
-  <div class="badge-container">
-    <div class="skill-badge">Ansys Fluent</div>
-    <div class="skill-badge">E-nose</div>
-    <div class="skill-badge">Bio-inspired Sensing</div>
-  </div>
 </div>
+
+<h2 class="section">Skills</h2>
+<dl class="skills">
+  <dt>Machine learning</dt><dd>Python, PyTorch, reinforcement learning (PPO), YOLOv8</dd>
+  <dt>Robotics &amp; simulation</dt><dd>ROS, Isaac Gym, Gazebo, Ansys Fluent</dd>
+</dl>
