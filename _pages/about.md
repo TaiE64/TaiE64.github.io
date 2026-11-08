@@ -1,13 +1,12 @@
 ---
 permalink: /
-title: "About"
 author_profile: false
 redirect_from:
   - /about/
   - /about.html
 ---
 
-<p>I am a final-year MEng student in Robotics and Artificial Intelligence at <a href="https://www.ucl.ac.uk/computer-science/">University College London</a>, working on robot learning for humanoid and legged locomotion, reinforcement learning, and surgical scene understanding.</p>
+<p class="lead">I am a final-year MEng student in Robotics and Artificial Intelligence at <a href="https://www.ucl.ac.uk/computer-science/">University College London</a>, working on robot learning for humanoid and legged locomotion, reinforcement learning, and surgical scene understanding.</p>
 
 <h2 class="section">News</h2>
 <ul class="news">
@@ -31,9 +30,9 @@ redirect_from:
 </div>
 
 <h2 class="section">Awards</h2>
-<ul class="honors">
-  <li><i class="fas fa-trophy honors__icon is-gold"></i><div><strong>Best Workshop Paper Award</strong><span>IROS 2025 RGMC Workshop · <a href="https://arxiv.org/abs/2503.02387">RGBSQGrasp</a></span></div><time>2025</time></li>
-  <li><i class="fas fa-medal honors__icon is-silver"></i><div><strong>Kaggle Silver Medal</strong><span>18th of ~2,600 teams · Deep Past Challenge: Akkadian–English Translation</span></div><time>2026</time></li>
-  <li><i class="fas fa-medal honors__icon is-gold"></i><div><strong>Gold Medal</strong><span>UKMT Mathematical Challenge</span></div><time>2023</time></li>
-  <li><i class="fas fa-medal honors__icon is-gold"></i><div><strong>Gold Medal</strong><span>British Physics Olympiad</span></div><time>2021</time></li>
+<ul class="awards">
+  <li><span><strong>Best Workshop Paper Award</strong>, IROS 2025 RGMC Workshop</span><span>2025</span></li>
+  <li><span><strong>Kaggle Silver Medal</strong>, 18th of ~2,600 teams, Deep Past Challenge</span><span>2026</span></li>
+  <li><span><strong>Gold Medal</strong>, UKMT Mathematical Challenge</span><span>2023</span></li>
+  <li><span><strong>Gold Medal</strong>, British Physics Olympiad</span><span>2021</span></li>
 </ul>

@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Sebastian Ren"
+title                    : "Yuanchuan Ren"
 title_separator          : "-"
-name                     : &name "Sebastian Ren"
-description              : &description "Sebastian Ren — MEng Robotics & AI student at UCL working on humanoid and legged locomotion, reinforcement learning and surgical scene understanding."
+name                     : &name "Yuanchuan Ren"
+description              : &description "Yuanchuan (Sebastian) Ren — MEng Robotics & AI student at UCL working on humanoid and legged locomotion, reinforcement learning and surgical scene understanding."
 url                      : "https://taie64.github.io"
 baseurl                  : "" 
 repository               : "TaiE64/TaiE64.github.io"
@@ -23,7 +23,8 @@ repository               : "TaiE64/TaiE64.github.io"
 author:
   # Biographic information
   avatar           : "profile.jpg"
-  name             : "Sebastian Ren"
+  name             : "Yuanchuan Ren"
+  alias            : "Sebastian"
   description      : "MEng Robotics & AI · University College London"
   pronouns         : ""
   bio              : "Robot learning: humanoid & legged locomotion, reinforcement learning, surgical scene understanding."
