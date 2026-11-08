@@ -8,7 +8,7 @@ redirect_from:
 
 ## About Me
 
-I am a final-year MEng student in Robotics and Artificial Intelligence at [University College London](https://www.ucl.ac.uk/computer-science/), working on robot learning for humanoid and legged locomotion, reinforcement learning, and surgical scene understanding.
+I am a final-year MEng student in Robotics and Artificial Intelligence at [University College London](https://www.ucl.ac.uk/computer-science/).
 
 ## News
 
