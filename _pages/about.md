@@ -15,7 +15,7 @@ I am a final-year MEng student in Robotics and Artificial Intelligence at [Unive
 - **[Sep. 2026]** [CasCVS-Net](https://arxiv.org/abs/2609.27681) is out on arXiv — oral at MICCAI SafeSurg 2026.
 - **[Jul. 2026]** [Calf-Integrated Arms](https://arxiv.org/abs/2607.06186) is out on arXiv — oral at CLAWAR 2026.
 - **[Jun. 2026]** Joined BYTE ABEE (Athens) as a Robotics Engineer, working on humanoid motion control.
-- **[2026]** Kaggle silver medal: 18th of ~2,600 teams in the Deep Past Challenge.
+- **[2026]** Kaggle silver medal (18th of 2,674 teams) in the [Deep Past Challenge](https://www.kaggle.com/competitions/deep-past-initiative-machine-translation).
 - **[Oct. 2025]** [RGBSQGrasp](https://arxiv.org/abs/2503.02387) received the Best Workshop Paper Award at the IROS 2025 RGMC Workshop.
 
 {% include home-publications.html %}
@@ -43,6 +43,6 @@ I am a final-year MEng student in Robotics and Artificial Intelligence at [Unive
 ## Awards
 
 - **Best Workshop Paper Award**, IROS 2025 RGMC Workshop, 2025.
-- **Kaggle Silver Medal**, 18th of ~2,600 teams, Deep Past Challenge, 2026.
+- **Kaggle Silver Medal** (18th of 2,674 teams), [Deep Past Challenge](https://www.kaggle.com/competitions/deep-past-initiative-machine-translation), 2026.
 - **Gold Medal**, UKMT Mathematical Challenge, 2023.
 - **Gold Medal**, British Physics Olympiad, 2021.
