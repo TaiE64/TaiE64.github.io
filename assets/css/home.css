@@ -75,22 +75,22 @@ section h2:first-child { margin-top: 2px; }
 .publications ol.bibliography { list-style: none; padding: 0; margin: 0; }
 .publications ol.bibliography li { margin-bottom: 1.6rem; }
 .pub-row { display: flex; align-items: center; }
-.pub-row .abbr { position: relative; flex: 0 0 200px; padding-right: 20px; }
+.pub-row .abbr { position: relative; flex: 0 0 152px; padding-right: 20px; }
 .pub-row .teaser {
   display: block;
-  width: 200px;
-  height: 150px;
+  width: 152px;
+  height: 114px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 3px 3px 6px #888;
 }
 .pub-row .badge {
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 6px;
+  left: 6px;
   display: inline-block;
   padding: 0.25em 0.6em;
-  font: 700 11px/1 -apple-system, "Segoe UI", Roboto, sans-serif;
+  font: 700 10px/1 -apple-system, "Segoe UI", Roboto, sans-serif;
   letter-spacing: 0.02em;
   color: #fff;
   background-color: #002d72;
@@ -138,6 +138,6 @@ section h2:first-child { margin-top: 2px; }
 @media print, screen and (max-width: 480px) {
   .pub-row { display: block; }
   .pub-row .abbr { padding: 0 0 10px; }
-  .pub-row .teaser { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+  .pub-row .teaser { width: 100%; max-width: 220px; height: auto; aspect-ratio: 4 / 3; }
   .image.avatar img { width: 95px; }
 }
