@@ -314,9 +314,10 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   margin: 0; padding: 0; background: none; border: 0; border-radius: 0;
   transition: grid-template-rows 0.28s ease, opacity 0.28s ease, margin-top 0.28s ease;
 }
-.page__content .pub__abstract.is-open { grid-template-rows: 1fr; opacity: 1; margin-top: 14px; }
+.page__content .pub__abstract.is-open { grid-template-rows: 1fr; opacity: 1; margin-top: 16px; }
 .pub__abstract-inner { overflow: hidden; min-height: 0; }
-.pub__abstract-inner > div { padding-left: 16px; border-left: 2px solid var(--line); }
+.page__content .pub__abstract { grid-column: 1 / -1; }
+.pub__abstract-inner > p { padding: 12px 16px; background: var(--soft); border-radius: 8px; }
 .page__content .pub__abstract-inner p {
   margin: 0 0 0.75em !important;
   font-size: 0.93rem !important; line-height: 1.7 !important; color: #474d55;
