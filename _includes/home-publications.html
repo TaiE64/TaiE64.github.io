@@ -1,0 +1,29 @@
+<h2 id="publications">Publications</h2>
+
+<div class="publications">
+<ol class="bibliography">
+{% for p in site.data.publications.main %}
+<li>
+  <div class="pub-row">
+    <div class="abbr">
+      <a href="{{ p.arxiv }}" target="_blank" rel="noopener"><img class="teaser" src="{{ p.image }}" alt="{{ p.title | strip_html | escape }}" loading="lazy"></a>
+      <abbr class="badge">{{ p.conference_short }}</abbr>
+    </div>
+    <div class="info">
+      <div class="title"><a href="{{ p.arxiv }}" target="_blank" rel="noopener">{{ p.title }}</a></div>
+      <div class="author">{{ p.authors }}</div>
+      <div class="periodical"><em>{{ p.conference }}</em></div>
+      <div class="links">
+        <a href="{{ p.pdf }}" class="btn" target="_blank" rel="noopener">PDF</a>
+        <a href="{{ p.arxiv }}" class="btn" target="_blank" rel="noopener">arXiv</a>
+        <a href="#" class="btn abstract-toggle" aria-expanded="false" aria-controls="abs-{{ forloop.index }}">Abstract</a>
+        <span class="notes">{{ p.notes }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="abstract" id="abs-{{ forloop.index }}"><p>{{ p.abstract }}</p></div>
+</li>
+{% endfor %}
+</ol>
+</div>
+<p class="pub-note"><sup>†</sup> Equal contribution.</p>

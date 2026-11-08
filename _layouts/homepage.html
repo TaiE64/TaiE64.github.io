@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Home page layout adapted from the Minimal Light theme by Yaoyao Liu (CC0): https://github.com/yaoyao-liu/minimal-light -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.author.name }} | {{ site.author.employer }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ site.url }}/">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Ubuntu+Mono&display=swap">
+    <link rel="stylesheet" href="/assets/css/home.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a class="image avatar"><img src="/images/{{ site.author.avatar }}" alt="{{ site.author.name }}"></a>
+
+        <h1>{{ site.author.name }}</h1>
+        {% if site.author.alias %}<div class="alias">({{ site.author.alias }})</div>{% endif %}
+
+        <position>{{ site.author.position }}</position>
+        <br>
+        <a href="{{ site.author.employer_link }}" rel="noopener"><autocolor>{{ site.author.employer }}</autocolor></a>
+        <br>
+        <email>{{ site.author.email | replace: "@", " (at) " }}</email>
+
+        <br>
+        <br>
+        <div class="social-icons">
+          <a href="mailto:{{ site.author.email }}" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="/Sebastian_Ren_CV.pdf" title="CV"><i class="ai ai-cv" style="font-size:1.3rem;"></i></a>
+          {% if site.author.googlescholar %}<a href="https://scholar.google.com/citations?user={{ site.author.googlescholar }}" title="Google Scholar"><i class="ai ai-google-scholar" style="font-size:1.2rem"></i></a>{% endif %}
+          <a href="https://github.com/{{ site.author.github }}" title="GitHub"><i class="fab fa-github"></i></a>
+          {% if site.author.linkedin %}<a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" title="LinkedIn"><i class="fab fa-linkedin"></i></a>{% endif %}
+        </div>
+        <br>
+      </header>
+
+      <section>
+        {{ content }}
+        <br>
+        <p><small>Last updated {{ site.time | date: "%B %Y" }}. Design adapted from the <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
+      </section>
+    </div>
+
+    <script>
+      document.querySelectorAll('.publications .abstract-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          var box = document.getElementById(btn.getAttribute('aria-controls'));
+          var open = box.classList.toggle('open');
+          btn.setAttribute('aria-expanded', String(open));
+        });
+      });
+    </script>
+  </body>
+</html>

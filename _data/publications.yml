@@ -1,0 +1,32 @@
+# Publications shown on the home page, newest first.
+main:
+
+  - title: "CasCVS-Net: A Staged Multi-Task Cascade for Critical View of Safety Assessment"
+    authors: "Bock-Zien Toh<sup>†</sup>, <strong>Yuanchuan Ren</strong><sup>†</sup>, Tay Aw Yu, Ng Khee Ong, Zhehua Mao, Sophia Bano"
+    conference_short: MICCAI
+    conference: "MICCAI 2026 SafeSurg Workshop"
+    arxiv: https://arxiv.org/abs/2609.27681
+    pdf: https://arxiv.org/pdf/2609.27681
+    image: /images/pubs/cascvs-net.jpg
+    notes: Oral
+    abstract: "CasCVS-Net assesses the Critical View of Safety in laparoscopic cholecystectomy by chaining three tasks: predicted boxes guide anatomy segmentation, and predicted masks supply the region features for CVS classification, so no ground-truth annotations are needed at inference. Staged training, from detection up to the full cascade, improves grounding of small and rare hepatocystic structures."
+
+  - title: "Calf-Integrated Arms for Bimanual Quadruped Loco-Manipulation"
+    authors: "Yan Pan, <strong>Yuanchuan Ren</strong>, Chipui Chan, Jingcheng Sun, Chengxu Zhou"
+    conference_short: CLAWAR
+    conference: "International Conference on Climbing and Walking Robots <strong>(CLAWAR)</strong>, 2026"
+    arxiv: https://arxiv.org/abs/2607.06186
+    pdf: https://arxiv.org/pdf/2607.06186
+    image: /images/pubs/calf-arms.jpg
+    notes: Oral
+    abstract: "An arm is built into each front calf of a Unitree Go2, so the robot can grasp at ground level and manipulate with both hands while all four feet stay planted. A vision-language model sequences skills from a fixed library for long-horizon tasks, shown in simulation on a cabinet task, a two-handed lift and an inter-arm handover."
+
+  - title: "RGBSQGrasp: Inferring Local Superquadric Primitives from Single RGB Image for Graspability-Aware Bin Picking"
+    authors: "Yifeng Xu, Fan Zhu, Ye Li, <strong>Sebastian Ren</strong>, Xiaonan Huang, Yuhao Chen"
+    conference_short: IROS
+    conference: "IROS 2025 RGMC Workshop"
+    arxiv: https://arxiv.org/abs/2503.02387
+    pdf: https://arxiv.org/pdf/2503.02387
+    image: /images/pubs/rgbsqgrasp.jpg
+    notes: Best Workshop Paper Award
+    abstract: "RGBSQGrasp picks objects from cluttered bins with a single RGB camera and no depth sensor: a foundation depth model and a superquadric-fitting network recover a compact shape primitive for each object, which then guides grasp-pose sampling. Real-robot experiments show reliable grasps on unseen objects in packed bins."
