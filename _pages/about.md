@@ -102,26 +102,6 @@ redirect_from:
     line-height: 1.6;
   }
 
-  /* Research Interest Badges */
-  .interest-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
-    margin-bottom: 30px;
-  }
-  
-  .pill {
-    background-color: var(--port-primary); 
-    color: #ffffff; 
-    font-size: 0.85em; 
-    font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 4px; 
-    letter-spacing: 0.03em;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-
   /* News Timeline Styling */
   .news-scroll-container {
     max-height: 500px; 
@@ -218,15 +198,6 @@ redirect_from:
 
 <div class="content-text">
   Most recently I was a Robotics Engineer at <strong>BYTE ABEE</strong> in Athens, where I fine-tuned the SONIC humanoid motion controller to transfer it from Unitree G1 to AgiBot X2 and deployed it on the physical robot. At the <strong>UCL Hawkes Institute</strong> I co-first-authored CasCVS-Net, a staged multi-task cascade for Critical View of Safety assessment in laparoscopic surgery (MICCAI SafeSurg 2026, Oral). Before that I worked on bipedal locomotion for quadruped robots at the <strong>UCL Robot Perception &amp; Learning Lab</strong>, a person-following mobile robot at <strong>ANTOBOT</strong>, and bio-inspired airflow sensing at <strong>The Future Laboratory, Tsinghua University</strong>.
-</div>
-
-<h2 class="section-title">Research Interests</h2>
-<div class="interest-pills">
-  <span class="pill">Humanoid &amp; Legged Locomotion</span>
-  <span class="pill">Reinforcement Learning</span>
-  <span class="pill">Loco-Manipulation</span>
-  <span class="pill">Surgical Scene Understanding</span>
-  <span class="pill">Robot Perception</span>
 </div>
 
 <h2 class="section-title">Recent News</h2>
