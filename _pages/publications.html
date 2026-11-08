@@ -7,51 +7,60 @@ author_profile: false
 
 <ul class="pubs">
   <li class="pub">
-    <div class="pub__title">CasCVS-Net: A Staged Multi-Task Cascade for Critical View of Safety Assessment</div>
-    <div class="pub__authors">Bock-Zien Toh<sup>†</sup>, <strong>Yuanchuan Ren</strong><sup>†</sup>, Tay Aw Yu, Ng Khee Ong, Zhehua Mao, Sophia Bano</div>
-    <div class="pub__venue"><em>MICCAI 2026 SafeSurg Workshop</em> · <span class="pub__award">Oral</span></div>
-    <div class="pub__links">
-      <a href="https://arxiv.org/abs/2609.27681" target="_blank" rel="noopener">arXiv</a>
-      <a href="https://arxiv.org/pdf/2609.27681" target="_blank" rel="noopener">PDF</a>
-      <button type="button" aria-expanded="false" aria-controls="abs-0">Abstract <i class="fas fa-chevron-down"></i></button>
+    <a class="pub__thumb" href="https://arxiv.org/abs/2609.27681" target="_blank" rel="noopener"><img src="/images/pubs/cascvs-net.jpg" alt="CasCVS-Net segmentation of hepatocystic anatomy in a laparoscopic frame" width="480" height="360" loading="lazy"></a>
+    <div class="pub__body">
+      <div class="pub__title">CasCVS-Net: A Staged Multi-Task Cascade for Critical View of Safety Assessment</div>
+      <div class="pub__authors">Bock-Zien Toh<sup>†</sup>, <strong>Yuanchuan Ren</strong><sup>†</sup>, Tay Aw Yu, Ng Khee Ong, Zhehua Mao, Sophia Bano</div>
+      <div class="pub__venue"><em>MICCAI 2026 SafeSurg Workshop</em> · <span class="pub__award">Oral</span></div>
+      <div class="pub__links">
+        <a href="https://arxiv.org/abs/2609.27681" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://arxiv.org/pdf/2609.27681" target="_blank" rel="noopener">PDF</a>
+        <button type="button" aria-expanded="false" aria-controls="abs-0">Abstract <i class="fas fa-chevron-down"></i></button>
+      </div>
+      <div class="pub__abstract" id="abs-0"><div class="pub__abstract-inner"><div>
+          <p>Automated assessment of the Critical View of Safety (CVS) in laparoscopic cholecystectomy requires both recognition of the three CVS criteria and anatomical grounding in small, rare, and often occluded hepatocystic structures. Learning-based methods differ in the anatomical information they use, from image-level classification to detection, segmentation, or graph-based reasoning, yet grounding the safety-critical anatomy remains the main bottleneck.</p>
+          <p>We propose CasCVS-Net, a staged multi-task cascade that jointly performs object detection, semantic segmentation, and CVS assessment, trained on the Endoscapes dataset. The model couples the tasks through predicted anatomy: predicted boxes guide segmentation, and predicted masks provide region-level features for CVS classification, so CVS assessment at inference uses only model predictions rather than ground-truth annotations. To reduce optimisation instability in this coupled setting, training progresses from detection to detection-segmentation and then to the full three-task cascade, followed by task-wise fine-tuning.</p>
+          <p>Evaluation on the public unseen test set shows that CasCVS-Net improves over matched single-task baselines on all three tasks, achieving 32.0 detection mAP, 46.8 semantic mIoU, 15.3 rare-anatomy mIoU, and 67.2 CVS mAP. It outperforms the state-of-the-art LG-CVS and SV2LSTG by 6.3% and 4.5% relative CVS mAP, respectively, corresponding to 4.0 and 2.9 mAP points. These results show that staged task coupling through predicted boxes and masks improves anatomical grounding for CVS assessment, particularly for rare hepatocystic structures.</p></div>
+        </div></div>
     </div>
-    <div class="pub__abstract" id="abs-0"><div class="pub__abstract-inner"><div>
-        <p>Automated assessment of the Critical View of Safety (CVS) in laparoscopic cholecystectomy requires both recognition of the three CVS criteria and anatomical grounding in small, rare, and often occluded hepatocystic structures. Learning-based methods differ in the anatomical information they use, from image-level classification to detection, segmentation, or graph-based reasoning, yet grounding the safety-critical anatomy remains the main bottleneck.</p>
-        <p>We propose CasCVS-Net, a staged multi-task cascade that jointly performs object detection, semantic segmentation, and CVS assessment, trained on the Endoscapes dataset. The model couples the tasks through predicted anatomy: predicted boxes guide segmentation, and predicted masks provide region-level features for CVS classification, so CVS assessment at inference uses only model predictions rather than ground-truth annotations. To reduce optimisation instability in this coupled setting, training progresses from detection to detection-segmentation and then to the full three-task cascade, followed by task-wise fine-tuning.</p>
-        <p>Evaluation on the public unseen test set shows that CasCVS-Net improves over matched single-task baselines on all three tasks, achieving 32.0 detection mAP, 46.8 semantic mIoU, 15.3 rare-anatomy mIoU, and 67.2 CVS mAP. It outperforms the state-of-the-art LG-CVS and SV2LSTG by 6.3% and 4.5% relative CVS mAP, respectively, corresponding to 4.0 and 2.9 mAP points. These results show that staged task coupling through predicted boxes and masks improves anatomical grounding for CVS assessment, particularly for rare hepatocystic structures.</p></div>
-      </div></div>
   </li>
 
   <li class="pub">
-    <div class="pub__title">Calf-Integrated Arms for Bimanual Quadruped Loco-Manipulation</div>
-    <div class="pub__authors">Yan Pan, <strong>Yuanchuan Ren</strong>, Chipui Chan, Jingcheng Sun, Chengxu Zhou</div>
-    <div class="pub__venue"><em>CLAWAR 2026</em> · <span class="pub__award">Oral</span></div>
-    <div class="pub__links">
-      <a href="https://arxiv.org/abs/2607.06186" target="_blank" rel="noopener">arXiv</a>
-      <a href="https://arxiv.org/pdf/2607.06186" target="_blank" rel="noopener">PDF</a>
-      <button type="button" aria-expanded="false" aria-controls="abs-1">Abstract <i class="fas fa-chevron-down"></i></button>
+    <a class="pub__thumb" href="https://arxiv.org/abs/2607.06186" target="_blank" rel="noopener"><img src="/images/pubs/calf-arms.jpg" alt="Unitree Go2 with arms integrated into both front calves" width="480" height="360" loading="lazy"></a>
+    <div class="pub__body">
+      <div class="pub__title">Calf-Integrated Arms for Bimanual Quadruped Loco-Manipulation</div>
+      <div class="pub__authors">Yan Pan, <strong>Yuanchuan Ren</strong>, Chipui Chan, Jingcheng Sun, Chengxu Zhou</div>
+      <div class="pub__venue"><em>CLAWAR 2026</em> · <span class="pub__award">Oral</span></div>
+      <div class="pub__links">
+        <a href="https://arxiv.org/abs/2607.06186" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://arxiv.org/pdf/2607.06186" target="_blank" rel="noopener">PDF</a>
+        <button type="button" aria-expanded="false" aria-controls="abs-1">Abstract <i class="fas fa-chevron-down"></i></button>
+      </div>
+      <div class="pub__abstract" id="abs-1"><div class="pub__abstract-inner"><div>
+          <p>Most quadruped loco-manipulation designs trade manipulation capability against stance. A trunk-mounted arm sits high and usually carries a single arm; using the legs as manipulators lifts the manipulating leg off the ground; and even leg-mounted grippers reach two-handed tasks only by rearing onto the hind legs.</p>
+          <p>This paper integrates a manipulator with a prismatic slider, two revolute joints, and a gripper into each front calf of a Unitree Go2. The two arms grasp objects at ground level and manipulate with both hands while all four feet stay planted, without rearing. With one arm carrying, the base stays free to walk. A vision-language model sequences skills from a predefined library at each skill boundary, conditioned on the head-camera image and task state, for long-horizon autonomy.</p>
+          <p>In simulation, the design performs three bimanual tasks: a long-horizon cabinet task under autonomous skill selection, a cooperative two-handed lift, and an inter-arm handover.</p></div>
+        </div></div>
     </div>
-    <div class="pub__abstract" id="abs-1"><div class="pub__abstract-inner"><div>
-        <p>Most quadruped loco-manipulation designs trade manipulation capability against stance. A trunk-mounted arm sits high and usually carries a single arm; using the legs as manipulators lifts the manipulating leg off the ground; and even leg-mounted grippers reach two-handed tasks only by rearing onto the hind legs.</p>
-        <p>This paper integrates a manipulator with a prismatic slider, two revolute joints, and a gripper into each front calf of a Unitree Go2. The two arms grasp objects at ground level and manipulate with both hands while all four feet stay planted, without rearing. With one arm carrying, the base stays free to walk. A vision-language model sequences skills from a predefined library at each skill boundary, conditioned on the head-camera image and task state, for long-horizon autonomy.</p>
-        <p>In simulation, the design performs three bimanual tasks: a long-horizon cabinet task under autonomous skill selection, a cooperative two-handed lift, and an inter-arm handover.</p></div>
-      </div></div>
   </li>
 
   <li class="pub">
-    <div class="pub__title">RGBSQGrasp: Inferring Local Superquadric Primitives from Single RGB Image for Graspability-Aware Bin Picking</div>
-    <div class="pub__authors">Yifeng Xu, Fan Zhu, Ye Li, <strong>Sebastian Ren</strong>, Xiaonan Huang, Yuhao Chen</div>
-    <div class="pub__venue"><em>IROS 2025 RGMC Workshop</em> · <span class="pub__award">Best Workshop Paper Award</span></div>
-    <div class="pub__links">
-      <a href="https://arxiv.org/abs/2503.02387" target="_blank" rel="noopener">arXiv</a>
-      <a href="https://arxiv.org/pdf/2503.02387" target="_blank" rel="noopener">PDF</a>
-      <button type="button" aria-expanded="false" aria-controls="abs-2">Abstract <i class="fas fa-chevron-down"></i></button>
+    <a class="pub__thumb" href="https://arxiv.org/abs/2503.02387" target="_blank" rel="noopener"><img src="/images/pubs/rgbsqgrasp.jpg" alt="Bin of objects with superquadric-guided grasp poses" width="480" height="360" loading="lazy"></a>
+    <div class="pub__body">
+      <div class="pub__title">RGBSQGrasp: Inferring Local Superquadric Primitives from Single RGB Image for Graspability-Aware Bin Picking</div>
+      <div class="pub__authors">Yifeng Xu, Fan Zhu, Ye Li, <strong>Sebastian Ren</strong>, Xiaonan Huang, Yuhao Chen</div>
+      <div class="pub__venue"><em>IROS 2025 RGMC Workshop</em> · <span class="pub__award">Best Workshop Paper Award</span></div>
+      <div class="pub__links">
+        <a href="https://arxiv.org/abs/2503.02387" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://arxiv.org/pdf/2503.02387" target="_blank" rel="noopener">PDF</a>
+        <button type="button" aria-expanded="false" aria-controls="abs-2">Abstract <i class="fas fa-chevron-down"></i></button>
+      </div>
+      <div class="pub__abstract" id="abs-2"><div class="pub__abstract-inner"><div>
+          <p>Bin picking is a challenging robotic task due to occlusions and physical constraints that limit visual information for object recognition and grasping. Existing approaches often rely on known CAD models or prior object geometries, restricting generalization to novel or unknown objects. Other methods directly regress grasp poses from RGB-D data without object priors, but the inherent noise in depth sensing and the lack of object understanding make grasp synthesis and evaluation more difficult. Superquadrics (SQ) offer a compact, interpretable shape representation that captures the physical and graspability understanding of objects. However, recovering them from limited viewpoints is challenging, as existing methods rely on multiple perspectives for near-complete point cloud reconstruction, limiting their effectiveness in bin-picking.</p>
+          <p>To address these challenges, we propose RGBSQGrasp, a grasping framework that leverages superquadric shape primitives and foundation metric depth estimation models to infer grasp poses from a monocular RGB camera — eliminating the need for depth sensors. Our framework integrates a universal, cross-platform dataset generation pipeline, a foundation model-based object point cloud estimation module, a global-local superquadric fitting network, and an SQ-guided grasp pose sampling module. By integrating these components, RGBSQGrasp reliably infers grasp poses through geometric reasoning, enhancing grasp stability and adaptability to unseen objects.</p>
+          <p>Real-world robotic experiments demonstrate a 92% grasp success rate, highlighting the effectiveness of RGBSQGrasp in packed bin-picking environments.</p></div>
+        </div></div>
     </div>
-    <div class="pub__abstract" id="abs-2"><div class="pub__abstract-inner"><div>
-        <p>Bin picking is a challenging robotic task due to occlusions and physical constraints that limit visual information for object recognition and grasping. Existing approaches often rely on known CAD models or prior object geometries, restricting generalization to novel or unknown objects. Other methods directly regress grasp poses from RGB-D data without object priors, but the inherent noise in depth sensing and the lack of object understanding make grasp synthesis and evaluation more difficult. Superquadrics (SQ) offer a compact, interpretable shape representation that captures the physical and graspability understanding of objects. However, recovering them from limited viewpoints is challenging, as existing methods rely on multiple perspectives for near-complete point cloud reconstruction, limiting their effectiveness in bin-picking.</p>
-        <p>To address these challenges, we propose RGBSQGrasp, a grasping framework that leverages superquadric shape primitives and foundation metric depth estimation models to infer grasp poses from a monocular RGB camera — eliminating the need for depth sensors. Our framework integrates a universal, cross-platform dataset generation pipeline, a foundation model-based object point cloud estimation module, a global-local superquadric fitting network, and an SQ-guided grasp pose sampling module. By integrating these components, RGBSQGrasp reliably infers grasp poses through geometric reasoning, enhancing grasp stability and adaptability to unseen objects.</p>
-        <p>Real-world robotic experiments demonstrate a 92% grasp success rate, highlighting the effectiveness of RGBSQGrasp in packed bin-picking environments.</p></div>
-      </div></div>
   </li>
 </ul>
 
