@@ -7,9 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-<p>I am a final-year MEng student in Robotics and Artificial Intelligence at <a href="https://www.ucl.ac.uk/computer-science/">University College London</a> (First Class average). I work on robot learning: humanoid and legged locomotion, reinforcement learning, and surgical scene understanding.</p>
-
-<p>Most recently I was a Robotics Engineer at BYTE ABEE in Athens, where I fine-tuned the SONIC humanoid motion controller to transfer it from Unitree G1 to AgiBot X2 and deployed it on the physical robot. At the UCL Hawkes Institute I co-first-authored <a href="https://arxiv.org/abs/2609.27681">CasCVS-Net</a>, a staged multi-task cascade for Critical View of Safety assessment in laparoscopic surgery. Before that I worked on bipedal locomotion for quadruped robots at the UCL Robot Perception &amp; Learning Lab, a person-following mobile robot at ANTOBOT, and bio-inspired airflow sensing at The Future Laboratory, Tsinghua University.</p>
+<p>I am a final-year MEng student in Robotics and Artificial Intelligence at <a href="https://www.ucl.ac.uk/computer-science/">University College London</a>, working on robot learning for humanoid and legged locomotion, reinforcement learning, and surgical scene understanding.</p>
 
 <h2 class="section">News</h2>
 <ul class="news">
