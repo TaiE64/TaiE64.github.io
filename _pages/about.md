@@ -37,8 +37,7 @@ I am a final-year MEng student in Robotics and Artificial Intelligence at [Unive
 
 - **University College London**, MEng Robotics and Artificial Intelligence <span class="when">2023 – 2027</span>  
   Average 74.1% (First Class).
-- **St. Lawrence College, Athens**, International A-Levels <span class="when">2017 – 2023</span>  
-  Mathematics, Further Mathematics, Physics: A\*A\*A\*.
+- **St. Lawrence College, Athens**, International A-Levels <span class="when">2017 – 2023</span>
 
 ## Awards
 
